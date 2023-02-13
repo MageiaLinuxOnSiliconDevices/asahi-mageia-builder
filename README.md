@@ -1,4 +1,4 @@
-# asahi-fedora-builder
+# asahi-mageia-builder
 
 Builds a minimal Mageia image to run on Apple M1/M2 systems
 
@@ -9,23 +9,20 @@ Builds a minimal Mageia image to run on Apple M1/M2 systems
 Make sure to update your macOS to version 12.3 or later, then just pull up a Terminal in macOS and paste in this command:
 
 ```sh
-curl https://leifliddy.com/fedora.sh | sh
+curl https://github.com/MageiaLinuxOnSiliconDevices/mageia.sh | sh
 ```
 
-## Fedora Package Install
+## Mageia package install
 
 ```dnf install mkosi arch-install-scripts systemd-container zip```
 
 ### Notes
 
 - ```qemu-user-static``` is also needed if building the image on a ```non-aarch64``` system  
-- Until this PR is merged into the next `mkosi` release <https://github.com/systemd/mkosi/pull/1264/commits>  
-  install mksoi from main:  
-  `python3 -m pip install --user git+https://github.com/systemd/mkosi.git`
 
 ### Notes
 
-1. The root password is **fedora**
+1. The root password is **mageia**
 2. On the first boot the ```asahi-firstboot.service``` will run, selinux will be set to enforcing and the system will reboot.   
 3. The Asahi Linux-related RPM's (and Source RPM's) used in this image can be found here: <https://leifliddy.com/asahi-linux/37/>  
    All RPM's signed are signed by a GPG key.  
