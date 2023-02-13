@@ -26,7 +26,7 @@ curl https://github.com/MageiaLinuxOnSiliconDevices/scripts/mageia.sh | sh
 2. On the first boot the ```asahi-firstboot.service``` will run, selinux will be set to enforcing and the system will reboot.   
 3. The Asahi Linux-related RPM's (and Source RPM's) used in this image can be found here: <https://leifliddy.com/asahi-linux/37/>  
    All RPM's signed are signed by a GPG key.  
-   The repo config can be found here: <https://leifliddy.com/asahi-linux/asahi-linux.repo>  
+   The repo config can be found here: <https://github.com/MageiaLinuxOnSiliconDevices/asahi-linux/asahi-linux.repo>  
 4. The Fedora kernel config used is nearly identical to the kernel config used by the Asahi Linux project:
    - Only a few Fedora-specific modifications were made
    <https://github.com/AsahiLinux/PKGBUILDs/blob/main/linux-asahi/config>
@@ -52,7 +52,7 @@ You should definitely understand what this script does before running it. You ca
 
 Once Linux is installed on an M1 system, you can then boot a compatible usb drive via ```u-boot```.  
 This project will create a bootable USB drive for M1 systems.
-<https://github.com/leifliddy/asahi-fedora-usb>
+<https://github.com/MageiaLinuxOnSiliconDevices/asahi-mageia-usb>
 
 ## Display and keyboard backlight
 
@@ -62,16 +62,3 @@ The `light` command can be used to adjust the screen and keyboard backlight.
 light -s sysfs/leds/kbd_backlight -S 10
 light -s sysfs/backlight/apple-panel-bl -S 50
 ```
-
-## Fedora 37 Release
-
-To upgrade from F36 --> F37 <https://github.com/leifliddy/asahi-fedora-builder/issues/11>
-
-## Known Issues
-
-- **mesa-asahi libraries**
-If you have mesa version `1:23.0.0_pre20221207` or `1:23.0.0_pre20221209` installed  
-please see the following: <https://github.com/leifliddy/asahi-fedora-builder/issues/8#issuecomment-1352990854>
-
-Info on the official Fedora effort to support Apple silicon:
-<https://fedoraproject.org/wiki/SIGs/Asahi>
