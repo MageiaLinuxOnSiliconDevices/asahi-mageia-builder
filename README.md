@@ -9,7 +9,7 @@ Builds a minimal Mageia image to run on Apple M1/M2 systems
 Make sure to update your macOS to version 12.3 or later, then just pull up a Terminal in macOS and paste in this command:
 
 ```sh
-curl https://github.com/MageiaLinuxOnSiliconDevices/mageia.sh | sh
+curl https://github.com/MageiaLinuxOnSiliconDevices/scripts/mageia.sh | sh
 ```
 
 ## Mageia package install
